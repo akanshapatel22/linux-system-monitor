@@ -14,11 +14,10 @@ development roles.
 
 ## Features
 
-- Real-time CPU usage tracking per core
-- Memory usage monitoring (RAM, swap, buffers, cache)
-- Per-process metrics (PID, CPU%, memory%, state, name)
-- System uptime and load average reporting
-- Interrupt and context switch counters from /proc/stat
+- Real-time CPU usage monitoring using /proc/stat
+- Memory usage monitoring (RAM, buffers, and cache statistics)
+- Process monitoring using /proc entries with PID, process name, and CPU time statistics
+- Terminal-based real-time monitoring interface using ncurses
 - Configurable refresh rate
 
 ## Technical Details
@@ -53,8 +52,7 @@ linux-system-monitor/
   across refresh intervals
 - **Memory Parsing:** Parsing /proc/meminfo fields for accurate RSS, VSZ,
   and cache breakdown
-- **Process Enumeration:** Iterating /proc/[pid]/stat entries for per-process
-  CPU and memory accounting
+- **Process Enumeration:** Iterating /proc entries and parsing process information from /proc/[pid]/stat
 - **Real-Time Refresh:** Non-blocking terminal updates using ncurses for
   live system visibility
 
