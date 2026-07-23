@@ -58,11 +58,11 @@ linux-system-monitor/
 
 ## Tools & Environment
 
-- GCC / G++ with C++11
+- GCC / G++ (C++11)
 - GNU Make
-- ncurses library
-- Linux kernel 4.x+
-- GDB for debugging
+- ncurses
+- Linux
+- GDB (Debugging)
 - Valgrind for memory leak detection
 
 ## Skills Demonstrated
